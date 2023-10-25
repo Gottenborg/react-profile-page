@@ -1,27 +1,19 @@
-# React + TypeScript + Vite
+# Profilepage build on React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Run the env
+  - Clone the Git repo
+  - pnpm install
+  - pnpm dev
 
-Currently, two official plugins are available:
+## Future work
+  - File upload save the file and attach it to users
+  - Tags updating function
+  - Better form validation (Formik, zod are good candidates here)
+  - Cleaning up the components more reuseble components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Thoughts 
+I added TailwindCSS, autoprefixer and postCSS to the project for easy styling
+I decided to use Typescript eventhough it was not strictly needed for the project prefer having types in my code
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Building the UI
+I started breaking down the design to its smaller components in order to creater a list of "Atoms" that I could then develop and build into larger partials. the Idea is to make self contained components that then like Lego clicks together quickly and easy.
